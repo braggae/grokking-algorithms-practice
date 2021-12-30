@@ -7,5 +7,5 @@ int count(List list) {
 }
 
 main(List<String> args) {
-  print(count([1, 2, 3, 4]));
+  print(count([1, 2, 3, 4, 69]));
 }
