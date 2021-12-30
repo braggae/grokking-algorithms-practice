@@ -1,6 +1,6 @@
-int? binary_search(List highstack, int needle, [int low = 0, int? high]) {
+int? binary_search(List haystack, int needle, [int low = 0, int? high]) {
   if (high == null) {
-    high = highstack.length - 1;
+    high = haystack.length - 1;
   }
 
   if (high < low) {
@@ -8,14 +8,14 @@ int? binary_search(List highstack, int needle, [int low = 0, int? high]) {
   }
 
   int mid = ((low + high) / 2).round();
-  int guess = highstack[mid];
+  int guess = haystack[mid];
 
   if (guess == needle) {
     return mid;
   } else if (guess > needle) {
-    return binary_search(highstack, needle, low, mid - 1);
+    return binary_search(haystack, needle, low, mid - 1);
   } else {
-    return binary_search(highstack, needle, mid + 1, high);
+    return binary_search(haystack, needle, mid + 1, high);
   }
 }
 
